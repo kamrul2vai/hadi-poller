@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: hadi-poller
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python hadi_poller_telegram.py"
+    autoDeploy: true
+    # Replace with your GitHub repo if you want auto-create; set in Render dashboard instead 🔪
+    repo: "REPLACE_WITH_YOUR_GITHUB_REPO"  # 🔪 edit this or remove before using
